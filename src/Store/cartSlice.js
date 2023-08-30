@@ -11,7 +11,6 @@ const fetchFromLocalStorage = () => {
 
 const storeInLocalStorage = (data) => {
     localStorage.setItem('cart', JSON.stringify(data));
-    
 }
 
 const initialState = {
@@ -44,7 +43,6 @@ const cartSlice = createSlice({
 
                 state.carts = tempCart;
                 storeInLocalStorage(state.carts);
-                
             } else {
                 state.carts.push(action.payload);
                 storeInLocalStorage(state.carts);

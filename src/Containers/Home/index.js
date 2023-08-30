@@ -17,6 +17,9 @@ const HomePageContainer = ()=>{
 
     const products = useSelector(getAllProducts);
     const productStatus = useSelector(getAllProductsStatus);
+    //console.log('categories',categories)
+    //console.log('products',products)
+    //console.log('productStatus',productStatus);
     
     useEffect(() => {
         dispatch(fetchAsyncProducts(100));
@@ -35,7 +38,7 @@ const HomePageContainer = ()=>{
       let catBaseProducts_10 = products.filter(product => product.category === categories[9]);
 
     return(
-      <>
+        <>
           <SliderSectionComponents />
           
           {productStatus === STATUS.LOADING ? <LoaderComponents /> : <ProductListItemComponents category={categories[0]} products={catBaseProducts_1} />}

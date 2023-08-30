@@ -15,12 +15,15 @@ const ProductListItemComponents = ({products, category}) => {
                   <h3 className="sectionTitle">{category}</h3>
                 </div>
                 <div className='productLists row'>
+                  
                 {
                   products.map(product => {
                     let discountedPrice = (product.price) - (product.price * (product.discountPercentage / 100));
 
                     return (
-                      <SingleProductComponent key={product.id} product={{...product, discountedPrice}} />
+                      <div className='col-lg-3 col-md-4 col-sm-6 col-12' key={product.id}>
+                      <SingleProductComponent product={{...product, discountedPrice}} />
+                      </div>
                     )
                   })
                 }

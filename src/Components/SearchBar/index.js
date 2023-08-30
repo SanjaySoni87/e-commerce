@@ -15,7 +15,7 @@ const SearchBarComponents = ()=>{
     return (
         <Form onSubmit={handlerSubmit} className='searchProducts'>
             <Form.Control ref={elemSearch}  type="text" placeholder="Search for products ..." />
-            <Button variant="" type="submit">
+            <Button variant="primary" type="submit">
                 <span className='submitIcon'>
                     <BsSearch />
                 </span>

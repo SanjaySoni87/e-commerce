@@ -23,8 +23,9 @@ const SingleProductContainer = () => {
   const productSingleStatus = useSelector(getSingleProductStatus);
   const [quantity, setQuantity] = useState(1);
   const cartMessageStatus = useSelector(getCartMessageStatus);
-  let discountedPrice = product?.price - product?.price * (product?.discountPercentage / 100);
-  //console.log("product are here-", product, cartMessageStatus);
+  let discountedPrice =
+    product?.price - product?.price * (product?.discountPercentage / 100);
+  console.log("product", product, cartMessageStatus);
   useEffect(() => {
     dispatch(fetchAsyncProductSingle(productId));
 
@@ -57,10 +58,9 @@ const SingleProductContainer = () => {
   };
 
   const addToCartHandler = (product) => {
-    let discountedPrice = product?.price - product?.price * (product?.discountPercentage / 100);
+    let discountedPrice =
+      product?.price - product?.price * (product?.discountPercentage / 100);
     let totalPrice = quantity * discountedPrice;
-
-    console.log('Product Added-', discountedPrice)
 
      dispatch(addToCart({...product, quantity: quantity, totalPrice, discountedPrice}));
      dispatch(setCartMessageOn(true));

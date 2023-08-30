@@ -67,6 +67,10 @@ const LoginContainer = () => {
             <Button size="lg" onClick={formSubmit} variant="primary">Login</Button>
           </Col>
         </Row>
+        <Row>
+          <Col md={{ span: 6, offset: 3 }}>User ID:- <strong>kminchelle</strong></Col>
+          <Col md={{ span: 6, offset: 3 }}>Password:- <strong>0lelplR</strong></Col>
+          </Row>
       </Container>
     </>
   );

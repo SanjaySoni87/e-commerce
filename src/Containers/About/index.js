@@ -16,7 +16,7 @@ const AboutPageContainer = ()=>{
                         <Card.Body>
                             <Card.Title>About Page</Card.Title>
                             <Card.Text>
-                               I’m a User Interface Developer with about 7 years of experience. I like to work with passion for building cutting-edge, rich user interface with a nice coding standard and keep W3C web-standard in mind.
+                            I’m a User Interface Developer with about 12 years of experience. I like to work with passion for building cutting-edge, rich user interface with a nice coding standard and keep W3C web-standard in mind.
                             </Card.Text>
                         </Card.Body>
                         </Card>

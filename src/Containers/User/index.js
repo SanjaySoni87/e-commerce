@@ -6,7 +6,12 @@ import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import { useSelector, useDispatch } from "react-redux";
 import Button from 'react-bootstrap/Button';
-import {getUserDetails, fetchAsyncUserCartDetails, getUserCartDetails, clearUser} from "../../Store/userSlice";
+import {
+  getUserDetails,
+  fetchAsyncUserCartDetails,
+  getUserCartDetails,
+  clearUser
+} from "../../Store/userSlice";
 import { useNavigate, Link } from "react-router-dom";
 import "./User.scss";
 const UserContainer = () => {
@@ -61,7 +66,7 @@ const UserContainer = () => {
         </Row>
         <Row className="userOrderWrap">
           <Col>
-            <h4>My Previews order :- </h4>
+            <h4>My Previous order :- </h4>
 
             {userCartDetails &&
             userCartDetails.length > 0 &&
